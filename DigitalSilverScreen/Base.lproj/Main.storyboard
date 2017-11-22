@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473" y="-206"/>
+        </scene>
+        <!--PlayerVC-->
+        <scene sceneID="Uxz-iK-PsR">
+            <objects>
+                <viewController storyboardIdentifier="playerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iZT-pE-hIg" customClass="PlayerVC" customModule="FunBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bnv-VU-38n"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mok-2y-gvR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HPc-DD-mwX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GbY-5q-4VE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="8xK-rv-80U"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsz-8w-WsX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbK-Gd-Qlw">
+                                        <rect key="frame" x="167.5" y="80.5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="4H4-98-uQe"/>
+                                            <constraint firstAttribute="height" constant="40" id="XKu-Jg-H2J"/>
+                                        </constraints>
+                                        <state key="normal" image="pause"/>
+                                        <connections>
+                                            <action selector="playOrPause:" destination="iZT-pE-hIg" eventType="touchUpInside" id="UyR-lO-VKP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSM-ak-pkz">
+                                        <rect key="frame" x="0.0" y="3" width="45" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="kWp-kG-1yD"/>
+                                            <constraint firstAttribute="width" constant="45" id="nmz-nd-OGh"/>
+                                        </constraints>
+                                        <state key="normal" image="minimize"/>
+                                        <connections>
+                                            <action selector="dismissPlayer:" destination="iZT-pE-hIg" eventType="touchUpInside" id="Fwz-Ha-X5e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufy-ZG-I1J">
+                                        <rect key="frame" x="97.5" y="80.5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2O7-1e-GOV"/>
+                                            <constraint firstAttribute="width" constant="40" id="v4l-RT-RHt"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="previous-mini"/>
+                                        <connections>
+                                            <action selector="playPrevious:" destination="iZT-pE-hIg" eventType="touchUpInside" id="e5A-gD-lKC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLj-SJ-vO4">
+                                        <rect key="frame" x="237.5" y="80" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="hkB-0v-3CN"/>
+                                            <constraint firstAttribute="height" constant="40" id="sFO-su-3VL"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="next-mini"/>
+                                        <connections>
+                                            <action selector="playNext:" destination="iZT-pE-hIg" eventType="touchUpInside" id="nsL-m2-zLj"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTR-6M-2Qe">
+                                        <rect key="frame" x="65" y="11" width="220" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roX-UA-cnE">
+                                        <rect key="frame" x="15" y="176.5" width="40" height="13.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="2vR-Fb-QLK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9p-sH-WI6">
+                                        <rect key="frame" x="320" y="160" width="40" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="AZo-7c-Wt7"/>
+                                            <constraint firstAttribute="height" constant="35" id="zMY-wE-EgC"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_maxPlayer"/>
+                                        <connections>
+                                            <action selector="fullScreen:" destination="iZT-pE-hIg" eventType="touchUpInside" id="Y9w-Kj-fbY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxZ-h9-sSe">
+                                        <rect key="frame" x="275" y="176.5" width="40" height="13.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="xoc-Vp-0sa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOe-1l-OI9">
+                                        <rect key="frame" x="305" y="11" width="55" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="bHy-Ad-wgb"/>
+                                            <constraint firstAttribute="width" constant="55" id="eDu-8W-Bt7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="auto play">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="willAutoPlay:" destination="iZT-pE-hIg" eventType="touchUpInside" id="vnh-2g-qF6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBP-Yq-6I5">
+                                        <rect key="frame" x="167.5" y="80" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="PBC-Jc-ejC"/>
+                                            <constraint firstAttribute="height" constant="40" id="gCN-mb-c5E"/>
+                                        </constraints>
+                                        <state key="normal" image="replay"/>
+                                        <connections>
+                                            <action selector="playOrPause:" destination="iZT-pE-hIg" eventType="touchUpInside" id="3el-Lf-4cc"/>
+                                            <action selector="replay:" destination="iZT-pE-hIg" eventType="touchUpInside" id="9Zt-oi-dAh"/>
+                                        </connections>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="18k-3O-IAZ">
+                                        <rect key="frame" x="60" y="176.5" width="210" height="2"/>
+                                        <color key="progressTintColor" red="0.78431372549019607" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="trackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </progressView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4cX-Z4-TPE">
+                                        <rect key="frame" x="58" y="162" width="214" height="31"/>
+                                        <color key="minimumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="sliderAction:" destination="iZT-pE-hIg" eventType="valueChanged" id="Idv-UJ-afX"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4cX-Z4-TPE" secondAttribute="bottom" constant="8" id="090-dl-hZ3"/>
+                                    <constraint firstItem="oLj-SJ-vO4" firstAttribute="centerY" secondItem="Vsz-8w-WsX" secondAttribute="centerY" id="0gT-Y7-ye8"/>
+                                    <constraint firstAttribute="bottom" secondItem="JxZ-h9-sSe" secondAttribute="bottom" constant="10" id="3b3-XQ-s6m"/>
+                                    <constraint firstItem="XSM-ak-pkz" firstAttribute="leading" secondItem="Vsz-8w-WsX" secondAttribute="leading" id="4Ru-95-NKN"/>
+                                    <constraint firstItem="FbK-Gd-Qlw" firstAttribute="leading" secondItem="ufy-ZG-I1J" secondAttribute="trailing" constant="30" id="4tG-lI-RZa"/>
+                                    <constraint firstItem="KOe-1l-OI9" firstAttribute="leading" secondItem="xTR-6M-2Qe" secondAttribute="trailing" constant="20" id="8mf-xl-cpw"/>
+                                    <constraint firstItem="NBP-Yq-6I5" firstAttribute="centerY" secondItem="Vsz-8w-WsX" secondAttribute="centerY" id="Dfl-zg-NXt"/>
+                                    <constraint firstItem="XSM-ak-pkz" firstAttribute="top" secondItem="Vsz-8w-WsX" secondAttribute="top" constant="3" id="GZf-Yw-hQg"/>
+                                    <constraint firstItem="18k-3O-IAZ" firstAttribute="trailing" secondItem="4cX-Z4-TPE" secondAttribute="trailing" id="IAf-aN-9pl"/>
+                                    <constraint firstItem="FbK-Gd-Qlw" firstAttribute="centerX" secondItem="Vsz-8w-WsX" secondAttribute="centerX" id="IXy-ub-vgn"/>
+                                    <constraint firstItem="xTR-6M-2Qe" firstAttribute="leading" secondItem="XSM-ak-pkz" secondAttribute="trailing" constant="20" id="Kxr-z8-PdO"/>
+                                    <constraint firstAttribute="trailing" secondItem="KOe-1l-OI9" secondAttribute="trailing" constant="15" id="LHD-jx-ucN"/>
+                                    <constraint firstItem="FbK-Gd-Qlw" firstAttribute="centerX" secondItem="Vsz-8w-WsX" secondAttribute="centerX" id="M7U-nt-OPC"/>
+                                    <constraint firstItem="4cX-Z4-TPE" firstAttribute="leading" secondItem="roX-UA-cnE" secondAttribute="trailing" constant="5" id="PVB-Jf-fVJ"/>
+                                    <constraint firstItem="4cX-Z4-TPE" firstAttribute="centerY" secondItem="18k-3O-IAZ" secondAttribute="centerY" constant="-0.5" id="QHC-D5-zkM"/>
+                                    <constraint firstItem="oLj-SJ-vO4" firstAttribute="leading" secondItem="FbK-Gd-Qlw" secondAttribute="trailing" constant="30" id="VuK-RY-IVO"/>
+                                    <constraint firstAttribute="trailing" secondItem="a9p-sH-WI6" secondAttribute="trailing" constant="15" id="Wyn-bX-ZgE"/>
+                                    <constraint firstItem="FbK-Gd-Qlw" firstAttribute="centerY" secondItem="Vsz-8w-WsX" secondAttribute="centerY" id="Z21-oD-Qsz"/>
+                                    <constraint firstItem="xTR-6M-2Qe" firstAttribute="top" secondItem="XSM-ak-pkz" secondAttribute="top" constant="8" id="ZWn-ce-TeU"/>
+                                    <constraint firstAttribute="bottom" secondItem="a9p-sH-WI6" secondAttribute="bottom" constant="5" id="cLz-KQ-SML"/>
+                                    <constraint firstItem="KOe-1l-OI9" firstAttribute="top" secondItem="xTR-6M-2Qe" secondAttribute="top" id="eaE-sx-lf3"/>
+                                    <constraint firstItem="ufy-ZG-I1J" firstAttribute="centerY" secondItem="Vsz-8w-WsX" secondAttribute="centerY" id="fDB-OY-kfk"/>
+                                    <constraint firstItem="FbK-Gd-Qlw" firstAttribute="centerY" secondItem="Vsz-8w-WsX" secondAttribute="centerY" id="g7U-Wc-Qg5"/>
+                                    <constraint firstItem="18k-3O-IAZ" firstAttribute="leading" secondItem="4cX-Z4-TPE" secondAttribute="leading" id="qAK-03-AGW"/>
+                                    <constraint firstItem="JxZ-h9-sSe" firstAttribute="leading" secondItem="4cX-Z4-TPE" secondAttribute="trailing" constant="5" id="rdV-Z1-NPS"/>
+                                    <constraint firstItem="a9p-sH-WI6" firstAttribute="leading" secondItem="JxZ-h9-sSe" secondAttribute="trailing" constant="5" id="uKJ-LP-2qm"/>
+                                    <constraint firstItem="roX-UA-cnE" firstAttribute="leading" secondItem="Vsz-8w-WsX" secondAttribute="leading" constant="15" id="uOl-tN-CAw"/>
+                                    <constraint firstAttribute="bottom" secondItem="roX-UA-cnE" secondAttribute="bottom" constant="10" id="uck-DM-Auc"/>
+                                    <constraint firstItem="NBP-Yq-6I5" firstAttribute="centerX" secondItem="Vsz-8w-WsX" secondAttribute="centerX" id="yp0-AE-A0h"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lgE-QX-drC">
+                                <rect key="frame" x="169" y="81.5" width="37" height="37"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="124" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tYA-8J-9tD">
+                                <rect key="frame" x="0.0" y="205" width="375" height="462"/>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellID" rowHeight="124" id="nWt-eF-dEV" customClass="ContentTableViewCell" customModule="FunBox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nWt-eF-dEV" id="xBt-G9-81L">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihx-gv-hf5">
+                                                    <rect key="frame" x="10" y="5" width="355" height="113.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4jn-hy-o9P">
+                                                            <rect key="frame" x="10" y="10" width="140.5" height="93.5"/>
+                                                            <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="4jn-hy-o9P" secondAttribute="height" multiplier="1.5:1" id="zTu-vb-Qh5"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3V-bY-fRR">
+                                                            <rect key="frame" x="160.5" y="35" width="179.5" height="20"/>
+                                                            <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="AaV-uM-FCE"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1P9-cp-hc4">
+                                                            <rect key="frame" x="161" y="57" width="179" height="20"/>
+                                                            <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="qRG-ua-HKM"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="4jn-hy-o9P" secondAttribute="bottom" constant="10" id="1Fs-IG-Cif"/>
+                                                        <constraint firstAttribute="trailing" secondItem="M3V-bY-fRR" secondAttribute="trailing" constant="15" id="7A5-qe-2kW"/>
+                                                        <constraint firstItem="M3V-bY-fRR" firstAttribute="leading" secondItem="4jn-hy-o9P" secondAttribute="trailing" constant="10" id="8A3-eE-3iF"/>
+                                                        <constraint firstItem="M3V-bY-fRR" firstAttribute="centerY" secondItem="ihx-gv-hf5" secondAttribute="centerY" constant="-12" id="8KH-Jx-6dO"/>
+                                                        <constraint firstItem="4jn-hy-o9P" firstAttribute="leading" secondItem="ihx-gv-hf5" secondAttribute="leading" constant="10" id="9A6-LT-QRl"/>
+                                                        <constraint firstItem="4jn-hy-o9P" firstAttribute="top" secondItem="ihx-gv-hf5" secondAttribute="top" constant="10" id="D7Z-v4-yme"/>
+                                                        <constraint firstItem="1P9-cp-hc4" firstAttribute="leading" secondItem="M3V-bY-fRR" secondAttribute="leading" id="aIu-4O-6kl"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1P9-cp-hc4" secondAttribute="trailing" constant="15" id="aPr-50-GwH"/>
+                                                        <constraint firstItem="1P9-cp-hc4" firstAttribute="top" secondItem="M3V-bY-fRR" secondAttribute="bottom" constant="2" id="eJ3-LJ-gKI"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="ihx-gv-hf5" firstAttribute="top" secondItem="xBt-G9-81L" secondAttribute="top" constant="5" id="98a-xK-7wj"/>
+                                                <constraint firstItem="ihx-gv-hf5" firstAttribute="leading" secondItem="xBt-G9-81L" secondAttribute="leading" constant="10" id="Joq-Se-FDk"/>
+                                                <constraint firstAttribute="trailing" secondItem="ihx-gv-hf5" secondAttribute="trailing" constant="10" id="Or2-Ue-aNl"/>
+                                                <constraint firstAttribute="bottom" secondItem="ihx-gv-hf5" secondAttribute="bottom" constant="5" id="fgb-xv-Cil"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="iv_contentCoverImage" destination="4jn-hy-o9P" id="lVB-Wo-E9p"/>
+                                            <outlet property="lb_contentSubtitle" destination="1P9-cp-hc4" id="kWh-Nf-8IA"/>
+                                            <outlet property="lb_contentTitle" destination="M3V-bY-fRR" id="zNh-sW-maQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="iZT-pE-hIg" id="n7c-Is-f64"/>
+                                    <outlet property="delegate" destination="iZT-pE-hIg" id="EpS-fP-BLM"/>
+                                </connections>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFl-Br-DgP">
+                                <rect key="frame" x="0.0" y="205" width="375" height="462"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connection Failed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLS-TR-BbG">
+                                        <rect key="frame" x="118.5" y="220.5" width="137.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:bFL-9d-rzW:image" translatesAutoresizingMaskIntoConstraints="NO" id="bFL-9d-rzW">
+                                        <rect key="frame" x="162" y="160.5" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="5zw-E9-bWo"/>
+                                            <constraint firstAttribute="width" constant="50" id="mkx-i0-Auh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xW1-gp-zoI">
+                                        <rect key="frame" x="157" y="251.5" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="7Mr-U8-FGv"/>
+                                            <constraint firstAttribute="height" constant="30" id="zBI-aK-hOE"/>
+                                        </constraints>
+                                        <state key="normal" title="Retry">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="retry:" destination="iZT-pE-hIg" eventType="touchUpInside" id="q1w-kc-mo1"/>
+                                        </connections>
+                                    </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="H5q-R9-vDu">
+                                        <rect key="frame" x="177" y="50" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="H5q-R9-vDu" firstAttribute="centerX" secondItem="ZFl-Br-DgP" secondAttribute="centerX" id="8hN-12-zvh"/>
+                                    <constraint firstItem="H5q-R9-vDu" firstAttribute="top" secondItem="ZFl-Br-DgP" secondAttribute="top" constant="50" id="Gl4-Nj-R4D"/>
+                                    <constraint firstItem="xW1-gp-zoI" firstAttribute="top" secondItem="VLS-TR-BbG" secondAttribute="bottom" constant="10" id="Wcb-RC-ali"/>
+                                    <constraint firstItem="bFL-9d-rzW" firstAttribute="centerX" secondItem="ZFl-Br-DgP" secondAttribute="centerX" id="aYZ-fH-rne"/>
+                                    <constraint firstItem="VLS-TR-BbG" firstAttribute="top" secondItem="bFL-9d-rzW" secondAttribute="bottom" constant="10" id="cAm-RW-IPk"/>
+                                    <constraint firstItem="xW1-gp-zoI" firstAttribute="centerX" secondItem="ZFl-Br-DgP" secondAttribute="centerX" id="iWY-BM-SQH"/>
+                                    <constraint firstItem="VLS-TR-BbG" firstAttribute="centerX" secondItem="ZFl-Br-DgP" secondAttribute="centerX" id="keh-1Q-ZWL"/>
+                                    <constraint firstItem="VLS-TR-BbG" firstAttribute="centerY" secondItem="ZFl-Br-DgP" secondAttribute="centerY" id="lDp-ZA-2Kg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GbY-5q-4VE" firstAttribute="top" secondItem="HPc-DD-mwX" secondAttribute="top" id="62C-nO-Dhd"/>
+                            <constraint firstItem="tYA-8J-9tD" firstAttribute="top" secondItem="GbY-5q-4VE" secondAttribute="bottom" constant="5" id="8kV-Jt-HC9"/>
+                            <constraint firstItem="Vsz-8w-WsX" firstAttribute="trailing" secondItem="GbY-5q-4VE" secondAttribute="trailing" id="GeB-JA-gLi"/>
+                            <constraint firstItem="ZFl-Br-DgP" firstAttribute="trailing" secondItem="tYA-8J-9tD" secondAttribute="trailing" id="MZa-xE-1Je"/>
+                            <constraint firstItem="tYA-8J-9tD" firstAttribute="leading" secondItem="HPc-DD-mwX" secondAttribute="leading" id="MoH-R8-fcb"/>
+                            <constraint firstItem="lgE-QX-drC" firstAttribute="centerX" secondItem="Vsz-8w-WsX" secondAttribute="centerX" id="RbG-QY-MST"/>
+                            <constraint firstItem="Vsz-8w-WsX" firstAttribute="top" secondItem="GbY-5q-4VE" secondAttribute="top" id="SFQ-un-FAT"/>
+                            <constraint firstItem="ZFl-Br-DgP" firstAttribute="leading" secondItem="tYA-8J-9tD" secondAttribute="leading" id="cgk-LW-Ejf"/>
+                            <constraint firstItem="ZFl-Br-DgP" firstAttribute="bottom" secondItem="tYA-8J-9tD" secondAttribute="bottom" id="cxy-Cx-ibk"/>
+                            <constraint firstItem="Vsz-8w-WsX" firstAttribute="bottom" secondItem="GbY-5q-4VE" secondAttribute="bottom" id="kMJ-Zf-cDr"/>
+                            <constraint firstItem="Mok-2y-gvR" firstAttribute="top" secondItem="tYA-8J-9tD" secondAttribute="bottom" id="oqG-Bs-RmB"/>
+                            <constraint firstItem="lgE-QX-drC" firstAttribute="centerY" secondItem="Vsz-8w-WsX" secondAttribute="centerY" id="pb2-O5-8Oi"/>
+                            <constraint firstAttribute="trailing" secondItem="GbY-5q-4VE" secondAttribute="trailing" id="wIg-Gc-HGB"/>
+                            <constraint firstItem="ZFl-Br-DgP" firstAttribute="top" secondItem="tYA-8J-9tD" secondAttribute="top" id="y01-QR-pDK"/>
+                            <constraint firstItem="Vsz-8w-WsX" firstAttribute="leading" secondItem="GbY-5q-4VE" secondAttribute="leading" id="yDl-Ix-jRN"/>
+                            <constraint firstAttribute="trailing" secondItem="tYA-8J-9tD" secondAttribute="trailing" id="zJf-vF-tZ4"/>
+                            <constraint firstItem="GbY-5q-4VE" firstAttribute="leading" secondItem="HPc-DD-mwX" secondAttribute="leading" id="zcD-bR-leT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn_autoPlay" destination="KOe-1l-OI9" id="cj4-Sd-bkq"/>
+                        <outlet property="btn_dismissPlayer" destination="XSM-ak-pkz" id="AV4-Ao-L0Z"/>
+                        <outlet property="btn_fullScreen" destination="a9p-sH-WI6" id="f5i-RW-Ffp"/>
+                        <outlet property="btn_next" destination="oLj-SJ-vO4" id="q4U-Qf-go7"/>
+                        <outlet property="btn_playPause" destination="FbK-Gd-Qlw" id="44q-tW-D30"/>
+                        <outlet property="btn_previous" destination="ufy-ZG-I1J" id="jxW-6P-TDz"/>
+                        <outlet property="btn_replay" destination="NBP-Yq-6I5" id="4PK-QC-smV"/>
+                        <outlet property="btn_retry" destination="xW1-gp-zoI" id="0QI-T6-qqb"/>
+                        <outlet property="indicator_loadingContent" destination="H5q-R9-vDu" id="EU6-bv-WEm"/>
+                        <outlet property="indicator_player" destination="lgE-QX-drC" id="Mpg-aj-yw4"/>
+                        <outlet property="iv_noInternet" destination="bFL-9d-rzW" id="r2m-Xn-5Ta"/>
+                        <outlet property="lb_currentDuration" destination="roX-UA-cnE" id="zfF-Tu-Rok"/>
+                        <outlet property="lb_noInternet" destination="VLS-TR-BbG" id="gWj-1W-Ekp"/>
+                        <outlet property="lb_totalDuration" destination="JxZ-h9-sSe" id="0nR-ne-m80"/>
+                        <outlet property="lb_videoTitle" destination="xTR-6M-2Qe" id="lyn-Jy-bye"/>
+                        <outlet property="playerViewHeight" destination="8xK-rv-80U" id="ShS-oa-SKf"/>
+                        <outlet property="progressView" destination="18k-3O-IAZ" id="2gZ-QW-axe"/>
+                        <outlet property="slider" destination="4cX-Z4-TPE" id="3YL-e8-J1N"/>
+                        <outlet property="tableView" destination="tYA-8J-9tD" id="KBe-RP-rSG"/>
+                        <outlet property="tableViewTopConstraint" destination="8kV-Jt-HC9" id="eJr-jw-KLJ"/>
+                        <outlet property="view_controller" destination="Vsz-8w-WsX" id="8Yf-O4-4MI"/>
+                        <outlet property="view_noInternet" destination="ZFl-Br-DgP" id="j7a-67-7SD"/>
+                        <outlet property="view_videoPlayer" destination="GbY-5q-4VE" id="D36-Sc-3mn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kiz-F9-VDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160.8" y="-206.44677661169416"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_maxPlayer" width="15" height="15"/>
+        <image name="imageView:bFL-9d-rzW:image" width="67" height="67">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
+GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
+c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7NjcsIDY3fdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
+HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPEU7CTU0AKgAARiwAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARwAAALIAAAC+AAAAaQAAAAMAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+OAAAAO8AAAD/AAAA/wAAAP8AAACHAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI0AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAIgAAAADAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCAAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAhwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJQAAAN8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAACIAAAA
+AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAAA
+5AAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAIcAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAADkAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+hwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+PAAAAOQAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAACHAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAAA5AAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAIcAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAADwAAADkAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAhwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAABIAAAAZAAAAHgAAAB8AAAAcAAAAGQAAABEAAAAGAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAAOQAAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAACHAAAAAwAAAAAAAAAAAAAAAAAAAAMAAAAgAAAARAAAAG8AAACXAAAAtgAAAMoAAADZAAAA
+5AAAAOgAAADpAAAA5wAAAOMAAADXAAAAyQAAALUAAACWAAAAbgAAAEQAAAAfAAAAAwAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAA8AAAA5AAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAIYAAAAYAAAAQQAAAIgAAADDAAAA
+6QAAAPwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD8AAAA6AAAAMMAAACIAAAARAAAABEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAADkAAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD+AAAA4QAAAPsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAPwAAADYAAAA
+kwAAADsAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAOgAAAN0AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD4AAAAvwAAAFwAAAAPAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAACUAAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAAzgAAAGEAAAALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAE4AAADIAAAA/AAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+7wAAANYAAAC6AAAAnQAAAIYAAABzAAAAaQAAAGYAAABrAAAAdQAAAIcAAACeAAAAuwAAANcAAADwAAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAxAAAAEkAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIgAAAKMAAAD8AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAADiAAAAVAAAACYAAAAPAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAMAAAAPAAAAKAAAAFIAAACMAAAAyQAAAPUAAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD7AAAAnQAAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVwAAAN8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA+QAAAIcAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAkAAAAwAAAAegAAAM0AAAD9AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADZAAAA
+TwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAMAAAAjgAAAP0AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA9QAAALIAAADgAAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAjwAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAASwAAALEAAAD3AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAPoAAACEAAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAAtQAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD7AAAArQAAADoAAAAAAAAANwAAAOMAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAACPAAAA
+BQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAPwAAALIAAAD9AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAK0AAAAXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAArAAAA
+zgAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADNAAAATAAAAAEAAAAAAAAAAAAAAAAAAAA5AAAA
+4wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAI8AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA
+UgAAANIAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAxQAAACMAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAxAAAA2gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAPUAAACGAAAA
+EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADsAAADkAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+mAAAAFYAAABtAAAAeAAAAHoAAAB1AAAAagAAAFYAAAA8AAAAJAAAAAsAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAjgAAAPgAAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAADSAAAAKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVAAAA0AAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAANsAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+MwAAAOAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
++gAAAO4AAADSAAAAowAAAGQAAAApAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAABPAAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAMsAAAATAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAUgAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAALsAAAAjAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFwAAAFwAAADWAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA8AAAALkAAABgAAAA
+FgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAADCAAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwAAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAKQAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAAfAAAAN0AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANwAAAB7AAAAGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAFQAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAEkAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAPAAAAvAAAAP8AAAD/AAAA/wAAAJgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAoAAABrAAAA3gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAN0AAABpAAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAoQAAAP8AAAD/AAAA
+/wAAALgAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAAAB7AAAAoQAAAGEAAAAEAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADMAAAC+AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP4AAADrAAAA9AAAAP4AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAALwAAAAxAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAYAAABlAAAAoQAAAHkAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAGkAAADtAAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA4AAAALMAAADkAAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAApQAAAC8AAABLAAAAegAAAK8AAADgAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA6wAAAGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAADAAAAJgAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAO0AAAChAAAA
+SgAAABQAAAAAAAAAOAAAAOEAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP0AAACKAAAAAAAAAAAAAAAAAAAA
+FAAAAEkAAACgAAAA7QAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAkwAAAAoAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwAAAK8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA7QAAAIoAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3AAAA4AAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAI4AAAADAAAAAAAAAAAAAAAAAAAAAAAAACgAAACLAAAA7gAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAACpAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+BgAAAKgAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqgAAAC0AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAADYAAADgAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAjwAAAAQAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAC4AAACsAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAKIAAAAFAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAD1AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADqAAAA
+YwAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMwAAANwAAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAACOAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAGgAAADsAAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD0AAAALQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzAAAA
+9wAAAP8AAAD/AAAA/wAAAP8AAADUAAAANgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAgAAAAcAAABGAAAA6wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAI8AAAAEAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOgAAANgAAAD/AAAA/wAAAP8AAAD/AAAA9gAAADAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAALUAAAD/AAAA/wAAAP8AAADGAAAAIQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAAABQAAAAjQAAALsAAADUAAAA2gAAAPUAAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAjwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmAAAA
+zAAAAP8AAAD/AAAA/wAAALEAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZAAAA
+iwAAALsAAACIAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMgAAAJYAAADgAAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAACOAAAA
+BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsAAACLAAAAuwAAAIcAAAAWAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAeAAAAlgAAAPEAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAI8AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAA3AAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+jwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB1AAAA
+9wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAACPAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAByAAAA/gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADtAAAA
+wgAAAJUAAAB3AAAAbgAAAHgAAACWAAAAwwAAAO4AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAI8AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAAAA4wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAANkAAAB2AAAAJwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAoAAAA
+eQAAANsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAjwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAIAAAAO4AAAD/AAAA/wAAAP8AAAD/AAAA+AAAAIgAAAAXAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZAAAAjAAAAPoAAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAACPAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAACtAAAA/wAAAP8AAAD/AAAA
+6gAAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAABaAAAA7gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAI8AAAADAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAGQAAAJ4AAADVAAAAtgAAADsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEsAAADrAAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAAjwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAEAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwAAADIAAAA/AAAAMgAAABIAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAASgAAAOsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAACPAAAAAgAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAjgAAANoAAAD3AAAA
+/wAAAPcAAADZAAAAiwAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAA6gAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAI4AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAABIAAAA4QAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAARQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAEcAAADpAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAjwAAAAMAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAAA7gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAOwAAAA6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARQAAAOgAAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAACPAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANAAAA
+ygAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAyAAAAA0AAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAABEAAAA5wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAI8AAAADAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUwAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAPwAAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAABSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEMAAADmAAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAjwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJoAAAD/AAAA
+/wAAAP8AAAD/AAAA+wAAAIsAAAA/AAAAjwAAAPsAAAD/AAAA/wAAAP8AAAD/AAAAmgAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQQAAAOYAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAACPAAAA
+BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAIAAAC9AAAA/wAAAP8AAAD/AAAA/wAAALwAAAAAAAAAAAAAAAAAAAC+AAAA
+/wAAAP8AAAD/AAAA/wAAAL4AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA
+5QAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAI8AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAvwAAAP8AAAD/AAAA
+/wAAAP8AAAC3AAAAAAAAAAAAAAAAAAAAuQAAAP8AAAD/AAAA/wAAAP8AAAC/AAAAAgAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8AAADkAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+jwAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAJ8AAAD/AAAA/wAAAP8AAAD/AAAA9wAAAHUAAAAsAAAAeQAAAPcAAAD/AAAA
+/wAAAP8AAAD/AAAAnwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+PgAAAOMAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAACPAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbAAAA/wAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA9QAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAFoAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAAA4gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAI0AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAEgAAANQAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAANIAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAADsAAADhAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD+AAAAVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJAAAA9QAAAP8AAAD/AAAA
+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAPQAAABHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOgAAAOEAAAD/AAAA/wAAAP8AAAD/AAAA
+/wAAAJMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAFsAAADsAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAOsAAABYAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAA5AAAA3wAAAP8AAAD/AAAA/wAAAP8AAABqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMQAAAKUAAADlAAAA
+/gAAAP8AAAD+AAAA5AAAAKIAAAAvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcAAADSAAAA/wAAAP0AAACpAAAA
+DQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHwAAAEcAAABWAAAARQAAAB4AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAFwAAAFMAAABFAAAABwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAA4BAAADAAAAAQBDAAABAQADAAAAAQBDAAABAgADAAAABAAARtoBAwADAAAAAQABAAAB
+BgADAAAAAQACAAABEQAEAAAAAQAAAAgBEgADAAAAAQABAAABFQADAAAAAQAEAAABFgADAAAAAQBDAAAB
+FwAEAAAAAQAARiQBHAADAAAAAQABAAABUgADAAAAAQABAAABUwADAAAABAAARuKHcwAHAAAH2AAARuoA
+AAAAAAgACAAIAAgAAQABAAEAAQAAB9hhcHBsAiAAAG1udHJSR0IgWFlaIAfZAAIAGQALABoAC2Fjc3BB
+UFBMAAAAAGFwcGwAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAAANMtYXBwbAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC2Rlc2MAAAEIAAAAb2RzY20AAAF4AAAFnGNwcnQA
+AAcUAAAAOHd0cHQAAAdMAAAAFHJYWVoAAAdgAAAAFGdYWVoAAAd0AAAAFGJYWVoAAAeIAAAAFHJUUkMA
+AAecAAAADmNoYWQAAAesAAAALGJUUkMAAAecAAAADmdUUkMAAAecAAAADmRlc2MAAAAAAAAAFEdlbmVy
+aWMgUkdCIFByb2ZpbGUAAAAAAAAAAAAAABRHZW5lcmljIFJHQiBQcm9maWxlAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtbHVjAAAAAAAAAB8AAAAMc2tTSwAAACgA
+AAGEZGFESwAAAC4AAAGsY2FFUwAAACQAAAHadmlWTgAAACQAAAH+cHRCUgAAACYAAAIidWtVQQAAACoA
+AAJIZnJGVQAAACgAAAJyaHVIVQAAACgAAAKaemhUVwAAABYAAALCbmJOTwAAACYAAALYY3NDWgAAACIA
+AAL+aGVJTAAAAB4AAAMgaXRJVAAAACgAAAM+cm9STwAAACQAAANmZGVERQAAACwAAAOKa29LUgAAABYA
+AAO2c3ZTRQAAACYAAALYemhDTgAAABYAAAPMamFKUAAAABoAAAPiZWxHUgAAACIAAAP8cHRQTwAAACYA
+AAQebmxOTAAAACgAAAREZXNFUwAAACYAAAQedGhUSAAAACQAAARsdHJUUgAAACIAAASQZmlGSQAAACgA
+AASyaHJIUgAAACgAAATacGxQTAAAACwAAAUCcnVSVQAAACIAAAUuYXJFRwAAACYAAAVQZW5VUwAAACYA
+AAV2AFYBYQBlAG8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbABHAGUAbgBlAHIAZQBsACAA
+UgBHAEIALQBiAGUAcwBrAHIAaQB2AGUAbABzAGUAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcAZQBuAOgA
+cgBpAGMAQx6lAHUAIABoAOwAbgBoACAAUgBHAEIAIABDAGgAdQBuAGcAUABlAHIAZgBpAGwAIABSAEcA
+QgAgAEcAZQBuAOkAcgBpAGMAbwQXBDAEMwQwBDsETAQ9BDgEOQAgBD8EQAQ+BEQEMAQ5BDsAIABSAEcA
+QgBQAHIAbwBmAGkAbAAgAGcA6QBuAOkAcgBpAHEAdQBlACAAUgBWAEIAwQBsAHQAYQBsAOEAbgBvAHMA
+IABSAEcAQgAgAHAAcgBvAGYAaQBskBp1KAAgAFIARwBCACCCcl9pY8+P8ABHAGUAbgBlAHIAaQBzAGsA
+IABSAEcAQgAtAHAAcgBvAGYAaQBsAE8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbAXkBegF
+1QXkBdkF3AAgAFIARwBCACAF2wXcBdwF2QBQAHIAbwBmAGkAbABvACAAUgBHAEIAIABnAGUAbgBlAHIA
+aQBjAG8AUAByAG8AZgBpAGwAIABSAEcAQgAgAGcAZQBuAGUAcgBpAGMAQQBsAGwAZwBlAG0AZQBpAG4A
+ZQBzACAAUgBHAEIALQBQAHIAbwBmAGkAbMd8vBgAIABSAEcAQgAg1QS4XNMMx3xmbpAaACAAUgBHAEIA
+IGPPj/Blh072TgCCLAAgAFIARwBCACAw1zDtMNUwoTCkMOsDkwO1A70DuQO6A8wAIAPAA8EDvwPGA68D
+uwAgAFIARwBCAFAAZQByAGYAaQBsACAAUgBHAEIAIABnAGUAbgDpAHIAaQBjAG8AQQBsAGcAZQBtAGUA
+ZQBuACAAUgBHAEIALQBwAHIAbwBmAGkAZQBsDkIOGw4jDkQOHw4lDkwAIABSAEcAQgAgDhcOMQ5IDicO
+RA4bAEcAZQBuAGUAbAAgAFIARwBCACAAUAByAG8AZgBpAGwAaQBZAGwAZQBpAG4AZQBuACAAUgBHAEIA
+LQBwAHIAbwBmAGkAaQBsAGkARwBlAG4AZQByAGkBDQBrAGkAIABSAEcAQgAgAHAAcgBvAGYAaQBsAFUA
+bgBpAHcAZQByAHMAYQBsAG4AeQAgAHAAcgBvAGYAaQBsACAAUgBHAEIEHgQxBEkEOAQ5ACAEPwRABD4E
+RAQ4BDsETAAgAFIARwBCBkUGRAZBACAGKgY5BjEGSgZBACAAUgBHAEIAIAYnBkQGOQYnBkUARwBlAG4A
+ZQByAGkAYwAgAFIARwBCACAAUAByAG8AZgBpAGwAZXRleHQAAAAAQ29weXJpZ2h0IDIwMDcgQXBwbGUg
+SW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC4AWFlaIAAAAAAAAPNSAAEAAAABFs9YWVogAAAAAAAAdE0A
+AD3uAAAD0FhZWiAAAAAAAABadQAArHMAABc0WFlaIAAAAAAAACgaAAAVnwAAuDZjdXJ2AAAAAAAAAAEB
+zQAAc2YzMgAAAAAAAQxCAAAF3v//8yYAAAeSAAD9kf//+6L///2jAAAD3AAAwGzSJSYnKFokY2xhc3Nu
+YW1lWCRjbGFzc2VzXxAQTlNCaXRtYXBJbWFnZVJlcKMnKSpaTlNJbWFnZVJlcFhOU09iamVjdNIlJiwt
+V05TQXJyYXmiLCrSJSYvMF5OU011dGFibGVBcnJheaMvLCrTMjMKNDU2V05TV2hpdGVcTlNDb2xvclNw
+YWNlRDAgMAAQA4AM0iUmODlXTlNDb2xvcqI4KtIlJjs8V05TSW1hZ2WiOypfEA9OU0tleWVkQXJjaGl2
+ZXLRP0BUcm9vdIABAAgAEQAaACMALQAyADcARgBMAFcAXgBlAHIAeQCBAIMAhQCKAIwAjgCXAJwApwCp
+AKsArQCyALUAtwC5ALsAvQDCANkA2wDdT6NPqE+zT7xPz0/TT95P50/sT/RP90/8UAtQD1AWUB5QK1Aw
+UDJQNFA5UEFQRFBJUFFQVFBmUGlQbgAAAAAAAAIBAAAAAAAAAEEAAAAAAAAAAAAAAAAAAFBwA
+</mutableData>
+        </image>
+        <image name="minimize" width="11" height="11"/>
+        <image name="next-mini" width="21" height="21"/>
+        <image name="pause" width="32" height="32"/>
+        <image name="previous-mini" width="21" height="21"/>
+        <image name="replay" width="32" height="32"/>
+    </resources>
+</document>
